@@ -1,0 +1,13 @@
+media: media
+content:
+  - name: test
+    label: "テスト（動作確認用）"
+    type: file
+    path: content/test.md
+    fields:
+      - name: title
+        label: タイトル
+        type: string
+      - name: body
+        label: 本文
+        type: rich-text
