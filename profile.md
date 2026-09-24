@@ -1,4 +1,5 @@
 ---
+photo: /assets/works/profile.jpg
 ---
 ---
 
