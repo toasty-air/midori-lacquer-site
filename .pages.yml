@@ -71,6 +71,13 @@ content:
     type: file
     path: profile.md
     fields:
+      - name: photo
+        label: "プロフィール写真"
+        type: image
+        description: "空欄にすると写真なしのページになります"
+        options:
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
       - name: body
         label: "プロフィール・経歴"
         type: rich-text
