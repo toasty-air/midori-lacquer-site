@@ -1,9 +1,9 @@
 ---
-title: "黒漆椀（ダミー）"
-title_en: "Black Lacquer Bowl"
-image: /assets/works/sample-01.jpg
-technique: "乾漆・黒漆"
-size: "φ18×H9cm"
+title: Work_01
+title_en: Work_01
+image: /assets/works/10011.jpg
+technique: 縮み漆
+dimension: "-"
 year: "2025"
 order: 10
 ---
