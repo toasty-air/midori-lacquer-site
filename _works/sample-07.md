@@ -1,9 +1,9 @@
 ---
-title: "朱の箱（ダミー）"
-title_en: "Vermilion Box"
-image: /assets/works/sample-07.jpg
-technique: "木地・朱漆"
-size: "W18×D18×H10cm"
-year: "2022"
+title: Work_07
+title_en: Work_07
+image: /assets/works/file.jpg
+technique: 木地・朱漆・縮み漆
+dimension: "-"
+year: "2025"
 order: 70
 ---
