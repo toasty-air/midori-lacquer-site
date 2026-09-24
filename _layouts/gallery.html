@@ -13,13 +13,13 @@ layout: default
         data-src="{{ work.image | relative_url }}"
         data-title="{{ work.title | escape }}"
         data-title-en="{{ work.title_en | escape }}"
-        data-meta="{% if work.technique %}{{ work.technique | escape }}{% endif %}{% if work.size %} / {{ work.size | escape }}{% endif %}{% if work.year %} / {{ work.year | escape }}{% endif %}">
+        data-meta="{% if work.technique %}{{ work.technique | escape }}{% endif %}{% if work.dimension %} / {{ work.dimension | escape }}{% endif %}{% if work.year %} / {{ work.year | escape }}{% endif %}">
         <img src="{{ work.image | relative_url }}" alt="{{ work.title | escape }}" loading="lazy">
       </button>
       <p class="work__caption">
         <span class="work__title">{{ work.title }}</span>
         {% if work.title_en %}<span class="work__title-en">{{ work.title_en }}</span>{% endif %}
-        <span class="work__meta">{% if work.technique %}{{ work.technique }}{% endif %}{% if work.size %} / {{ work.size }}{% endif %}{% if work.year %} / {{ work.year }}{% endif %}</span>
+        <span class="work__meta">{% if work.technique %}{{ work.technique }}{% endif %}{% if work.dimension %} / {{ work.dimension }}{% endif %}{% if work.year %} / {{ work.year }}{% endif %}</span>
       </p>
     </li>
     {% endfor %}
