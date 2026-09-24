@@ -3,14 +3,15 @@
 # ============================================================
 
 # サイト名・説明（検索結果やSNSのリンクプレビューに使われる）
-title: "MIDORI SAITO | 齋藤みどり"
+title: "SAITOU Midori | 齋藤みどり"
 description: "漆芸作家 齋藤みどりの作品と経歴。"
 lang: ja
 
 # 名前の表記（ヘッダー・フッターに表示）
+# ※2026/9/24、みどりさんの略歴書に記載の正式表記に合わせて確定
 artist:
   name_ja: "齋藤みどり"
-  name_en: "MIDORI SAITO"
+  name_en: "SAITOU Midori"
   role_ja: "漆芸作家"
 
 # URL設定
