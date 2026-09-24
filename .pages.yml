@@ -53,7 +53,7 @@ content:
         label: "技法・素材"
         type: string
         description: "例：乾漆・朱漆"
-      - name: size
+      - name: dimension
         label: "サイズ"
         type: string
         description: "例：φ18×H9cm"
