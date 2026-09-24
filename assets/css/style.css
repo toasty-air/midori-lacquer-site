@@ -104,6 +104,23 @@ a:hover, a:focus-visible { color: var(--accent); }
 .prose li { margin-bottom: 0.4em; }
 .prose--lead { margin-bottom: 40px; color: var(--muted); }
 
+/* ---------- プロフィール写真つきページ ---------- */
+.page-with-photo {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+}
+.profile-photo {
+  flex: 0 0 240px;
+  margin: 0;
+}
+.profile-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.page-with-photo .prose { flex: 1 1 auto; min-width: 0; }
+
 /* ---------- トップ（ABOUT） ---------- */
 .hero {
   margin: 8px 0 0;
@@ -288,4 +305,6 @@ a:hover, a:focus-visible { color: var(--accent); }
   .works-grid { gap: 32px 14px; }
   .work__caption { font-size: 11px; }
   .site-footer { flex-direction: column; align-items: flex-start; }
+   .page-with-photo { flex-direction: column; gap: 24px; }
+   .profile-photo { flex-basis: auto; max-width: 220px; }
 }
