@@ -103,6 +103,14 @@ a:hover, a:focus-visible { color: var(--accent); }
 .prose ul { padding-left: 1.2em; }
 .prose li { margin-bottom: 0.4em; }
 .prose--lead { margin-bottom: 40px; color: var(--muted); }
+.prose h2 {
+  margin: 40px 0 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+.prose h2:first-of-type { margin-top: 28px; }
 
 /* ---------- プロフィール写真つきページ ---------- */
 .page-with-photo {
