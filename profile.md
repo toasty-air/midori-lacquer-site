@@ -1,8 +1,6 @@
 ---
 photo: /assets/works/profile.jpg
 ---
----
----
 
 - 齋藤 みどり（**SAITOU Midori**）
 - 1992年 神奈川県に生まれる
