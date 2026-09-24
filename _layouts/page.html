@@ -3,7 +3,18 @@ layout: default
 ---
 <article class="page">
   <h1 class="page-title">{{ page.title }}</h1>
+  {% if page.photo %}
+  <div class="page-with-photo">
+    <figure class="profile-photo">
+      <img src="{{ page.photo | relative_url }}" alt="{{ site.artist.name_ja }}">
+    </figure>
+    <div class="prose">
+      {{ content }}
+    </div>
+  </div>
+  {% else %}
   <div class="prose">
     {{ content }}
   </div>
+  {% endif %}
 </article>
