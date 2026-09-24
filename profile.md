@@ -1,7 +1,6 @@
 ---
-photo: /assets/works/profile.jpg
+photo: /assets/works/10face.jpg
 ---
-
 - 齋藤 みどり（**SAITOU Midori**）
 - 1992年 神奈川県に生まれる
 - 2015年 金沢美術工芸大学 工芸科 卒業
