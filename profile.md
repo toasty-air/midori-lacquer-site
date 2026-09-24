@@ -2,7 +2,6 @@
 photo: /assets/works/profile.jpg
 ---
 ---
-
 ---
 
 - 齋藤 みどり（**SAITOU Midori**）
