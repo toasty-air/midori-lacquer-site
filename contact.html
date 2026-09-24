@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="page contact">
+  <h1 class="page-title">{{ page.title }}</h1>
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  {% comment %}
+    メールフォーム：第2週末にフォームサービス（Formspree等）と接続する。
+    接続時は action に送信先URLを入れ、disabled を外す。
+  {% endcomment %}
+  <form class="contact-form" action="#" method="POST">
+    <p class="contact-form__notice">※ フォームは準備中です（送信できません）</p>
+    <label>
+      <span>NAME お名前</span>
+      <input type="text" name="name" autocomplete="name" required disabled>
+    </label>
+    <label>
+      <span>EMAIL メールアドレス</span>
+      <input type="email" name="email" autocomplete="email" required disabled>
+    </label>
+    <label>
+      <span>MESSAGE お問い合わせ内容</span>
+      <textarea name="message" rows="7" required disabled></textarea>
+    </label>
+    <button type="submit" disabled>SEND</button>
+  </form>
+</article>

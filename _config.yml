@@ -1,0 +1,63 @@
+# ============================================================
+# サイト全体の設定（大規模改修の領域：遼太が管理）
+# ============================================================
+
+# サイト名・説明（検索結果やSNSのリンクプレビューに使われる）
+title: "MIDORI SAITO | 齋藤みどり"
+description: "漆芸作家 齋藤みどりの作品と経歴。"
+lang: ja
+
+# 名前の表記（ヘッダー・フッターに表示）
+artist:
+  name_ja: "齋藤みどり"
+  name_en: "MIDORI SAITO"
+  role_ja: "漆芸作家"
+
+# URL設定
+# ※独自ドメインで本公開するときは、次の2行を書き換える
+#   url: "https://（取得したドメイン）"
+#   baseurl: ""
+url: "https://toasty-air.github.io"
+baseurl: "/midori-lacquer-site"
+
+# 仮公開中は検索エンジンに登録させない（本公開時に false にする）
+noindex: true
+
+# メニュー（上から順に表示）
+nav:
+  - label: "ABOUT"
+    url: "/"
+  - label: "GALLERY"
+    url: "/gallery/"
+  - label: "PROFILE"
+    url: "/profile/"
+  - label: "CONTACT"
+    url: "/contact/"
+
+# 作品データ（_works フォルダ）。1作品＝1ファイル。個別ページは作らない
+collections:
+  works:
+    output: false
+
+# ページごとのレイアウトとURLをここで決めておく
+# （CMSで編集するファイルの中身を最小限に保つため）
+defaults:
+  - scope: { path: "index.md" }
+    values: { layout: "home", permalink: "/" }
+  - scope: { path: "gallery.md" }
+    values: { layout: "gallery", permalink: "/gallery/", title: "Gallery" }
+  - scope: { path: "profile.md" }
+    values: { layout: "page", permalink: "/profile/", title: "Profile" }
+  - scope: { path: "contact.md" }
+    values: { layout: "contact", permalink: "/contact/", title: "Contact" }
+
+plugins:
+  - jekyll-seo-tag
+
+markdown: kramdown
+
+# サイトに含めないファイル
+exclude:
+  - README.md
+  - content/
+  - .pages.yml

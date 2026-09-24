@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ja' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if site.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body class="page-{{ page.layout }}">
+  <header class="site-header">
+    <a class="site-name" href="{{ '/' | relative_url }}">
+      <span class="site-name__en">{{ site.artist.name_en }}</span>
+      <span class="site-name__ja">{{ site.artist.name_ja }}<span class="site-name__role">{{ site.artist.role_ja }}</span></span>
+    </a>
+    <nav class="site-nav" aria-label="メニュー">
+      <ul>
+        {% for item in site.nav %}
+        {% assign item_url = item.url | relative_url %}
+        <li><a href="{{ item_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav" aria-label="フッターメニュー">
+      <ul>
+        {% for item in site.nav %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <p class="copyright">&copy; {{ site.artist.name_en }} ALL RIGHTS RESERVED.</p>
+  </footer>
+</body>
+</html>

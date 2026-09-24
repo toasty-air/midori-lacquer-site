@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% if page.hero %}
+<figure class="hero">
+  <img src="{{ page.hero | relative_url }}" alt="{{ site.artist.name_ja }} の作品">
+</figure>
+{% endif %}
+
+<section class="statement">
+  <h1 class="visually-hidden">About</h1>
+  <div class="prose">
+    {{ content }}
+  </div>
+  <p class="statement__more"><a href="{{ '/gallery/' | relative_url }}">VIEW WORKS &rarr;</a></p>
+</section>

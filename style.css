@@ -1,0 +1,291 @@
+/* ============================================================
+   齋藤みどり サイト 共通スタイル（仮デザイン）
+   参考：静かな明るいグレーの地に、作品写真を主役として置く。
+   色は作品（黒・朱）に任せ、サイト側は無彩色で控えめにする。
+   ============================================================ */
+
+:root {
+  --bg: #ecebe8;          /* 地の色：あたたかみのある明るいグレー */
+  --text: #3a3938;        /* 本文 */
+  --muted: #7d7a76;       /* 補足・キャプション */
+  --rule: #c8c5c0;        /* 罫線 */
+  --accent: #a8331f;      /* 朱：リンクのホバーなど、ごく一部だけ */
+  --max: 1200px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --font: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+          "Noto Sans JP", "Yu Gothic", YuGothic, Meiryo, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: inherit; text-decoration: none; }
+a:hover, a:focus-visible { color: var(--accent); }
+
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* ---------- ヘッダー ---------- */
+.site-header {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 28px var(--gutter) 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.site-name { display: block; line-height: 1.4; }
+.site-name__en {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.site-name__ja {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+.site-name__role::before { content: "｜"; margin: 0 0.3em; }
+
+.site-nav ul,
+.footer-nav ul { list-style: none; margin: 0; padding: 0; }
+
+.site-nav ul { width: 200px; }
+.site-nav li { border-bottom: 1px solid var(--rule); }
+.site-nav a {
+  display: block;
+  padding: 3px 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.site-nav a[aria-current="page"] { color: var(--text); }
+.site-nav a:hover, .site-nav a:focus-visible { color: var(--accent); }
+
+/* ---------- 本文エリア ---------- */
+.site-main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter) 96px;
+}
+
+.page-title {
+  margin: 48px 0 32px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.prose { max-width: 38em; }
+.prose p { margin: 0 0 1.4em; }
+.prose ul { padding-left: 1.2em; }
+.prose li { margin-bottom: 0.4em; }
+.prose--lead { margin-bottom: 40px; color: var(--muted); }
+
+/* ---------- トップ（ABOUT） ---------- */
+.hero {
+  margin: 8px 0 0;
+}
+.hero img {
+  width: 100%;
+  max-height: 78vh;
+  object-fit: cover;
+}
+
+.statement {
+  margin: 72px auto 0;
+  max-width: 38em;
+}
+.statement__more {
+  margin-top: 40px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+.statement__more a { border-bottom: 1px solid var(--rule); padding-bottom: 2px; }
+
+/* ---------- ギャラリー ---------- */
+.works-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 56px 32px;
+}
+
+.work__open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+.work__open img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: opacity 0.2s;
+}
+.work__open:hover img, .work__open:focus-visible img { opacity: 0.85; }
+
+.work__caption {
+  margin: 12px 0 0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.work__title { display: block; }
+.work__title-en { display: block; color: var(--muted); letter-spacing: 0.06em; }
+.work__meta { display: block; color: var(--muted); font-size: 11px; }
+
+/* 拡大表示 */
+.lightbox {
+  border: 0;
+  padding: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+.lightbox::backdrop { background: rgba(0, 0, 0, 0.2); }
+.lightbox figure {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px var(--gutter) 32px;
+  gap: 16px;
+}
+.lightbox__img {
+  max-height: calc(100vh - 200px);
+  width: auto;
+  object-fit: contain;
+}
+.lightbox figcaption { text-align: center; font-size: 12px; line-height: 1.7; }
+.lightbox figcaption span { display: block; }
+.lightbox__title-en, .lightbox__meta { color: var(--muted); }
+.lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: var(--gutter);
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  cursor: pointer;
+}
+.lightbox__close:hover { color: var(--accent); }
+
+/* ---------- お問い合わせ ---------- */
+.contact-form {
+  max-width: 38em;
+  margin-top: 32px;
+  display: grid;
+  gap: 20px;
+}
+.contact-form label span {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  background: #f6f5f3;
+  font: inherit;
+  color: var(--text);
+}
+.contact-form button {
+  justify-self: start;
+  padding: 10px 40px;
+  border: 1px solid var(--text);
+  background: none;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--text);
+  cursor: pointer;
+}
+.contact-form button:disabled,
+.contact-form input:disabled,
+.contact-form textarea:disabled { opacity: 0.5; cursor: not-allowed; }
+.contact-form__notice { margin: 0; font-size: 12px; color: var(--accent); }
+
+/* ---------- フッター ---------- */
+.site-footer {
+  width: min(calc(100% - 2 * var(--gutter)), calc(var(--max) - 2 * var(--gutter)));
+  margin: 0 auto;
+  padding: 40px 0 48px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-nav ul { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+.footer-nav a {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.copyright {
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+/* ---------- スマートフォン・タブレット ---------- */
+@media (max-width: 900px) {
+  .works-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 20px; }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 14px; }
+  .site-header { flex-direction: column; gap: 16px; padding-top: 20px; }
+  .site-nav ul { width: auto; display: flex; flex-wrap: wrap; gap: 0 18px; }
+  .site-nav li { border-bottom: 0; }
+  .statement { margin-top: 48px; }
+  .page-title { margin-top: 24px; }
+  .works-grid { gap: 32px 14px; }
+  .work__caption { font-size: 11px; }
+  .site-footer { flex-direction: column; align-items: flex-start; }
+}
