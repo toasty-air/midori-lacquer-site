@@ -1,9 +1,9 @@
 ---
-title: "黒漆箱（ダミー）"
-title_en: "Black Lacquer Box"
-image: /assets/works/sample-03.jpg
-technique: "木地・黒漆"
-size: "W22×D16×H8cm"
-year: "2024"
+title: Work_03
+title_en: Work_03
+image: /assets/works/10038.jpg
+technique: 縮み漆
+dimension: "-"
+year: "2025"
 order: 30
 ---
