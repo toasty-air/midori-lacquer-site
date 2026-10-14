@@ -51,7 +51,7 @@ a:hover, a:focus-visible { color: var(--accent); }
   gap: 24px;
 }
 
-.site-name { display: block; line-height: 1.4; }
+.site-name { display: block; line-height: 1.3; }
 .site-name__en {
   display: block;
   font-size: 15px;
@@ -60,10 +60,10 @@ a:hover, a:focus-visible { color: var(--accent); }
 }
 .site-name__ja {
   display: block;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--muted);
-  letter-spacing: 0.1em;
-  margin-top: 4px;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
 }
 .site-name__role::before { content: "｜"; margin: 0 0.3em; }
 
@@ -175,6 +175,18 @@ a:hover, a:focus-visible { color: var(--accent); }
   object-fit: cover;
   transition: opacity 0.2s;
 }
+.work__open { position: relative; }
+.work__count {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 1px 7px;
+  background: rgba(58, 57, 56, 0.72);
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
 .work__open:hover img, .work__open:focus-visible img { opacity: 0.85; }
 
 .work__caption {
@@ -213,6 +225,35 @@ a:hover, a:focus-visible { color: var(--accent); }
   width: auto;
   object-fit: contain;
 }
+.lightbox__stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  touch-action: pan-y;
+}
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 64px;
+  border: 0;
+  background: rgba(236, 235, 232, 0.55);
+  font-size: 34px;
+  line-height: 1;
+  color: var(--text);
+  cursor: pointer;
+}
+.lightbox__img { -webkit-user-drag: none; user-select: none; -webkit-user-select: none; }
+.lightbox__prev { left: 0; }
+.lightbox__next { right: 0; }
+.lightbox__nav:hover { color: var(--accent); }
+.lightbox--single .lightbox__nav, .lightbox--single .lightbox__dots { display: none; }
+.lightbox__dots { margin: 0; display: flex; gap: 8px; justify-content: center; }
+.lightbox__dots span { width: 6px; height: 6px; border-radius: 50%; background: var(--rule); }
+.lightbox__dots span.is-current { background: var(--text); }
 .lightbox figcaption { text-align: center; font-size: 12px; line-height: 1.7; }
 .lightbox figcaption span { display: block; }
 .lightbox__title-en, .lightbox__meta { color: var(--muted); }
