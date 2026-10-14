@@ -49,6 +49,14 @@ content:
         options:
           extensions: [jpg, jpeg, png, webp]
           rename: safe
+      - name: images
+        label: "追加の写真（別の角度）"
+        type: image
+        list: true
+        description: "1枚目の写真に加えて、拡大表示でスワイプして見られる写真を追加できます（なくても構いません）"
+        options:
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
       - name: technique
         label: "技法・素材"
         type: string
